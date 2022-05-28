@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/storeraisul/static/css/main.6e684431.css",
-    "main.js": "/storeraisul/static/js/main.46ac43f3.js",
+    "main.js": "/storeraisul/static/js/main.84305874.js",
     "index.html": "/storeraisul/index.html",
     "main.6e684431.css.map": "/storeraisul/static/css/main.6e684431.css.map",
-    "main.46ac43f3.js.map": "/storeraisul/static/js/main.46ac43f3.js.map"
+    "main.84305874.js.map": "/storeraisul/static/js/main.84305874.js.map"
   },
   "entrypoints": [
     "static/css/main.6e684431.css",
-    "static/js/main.46ac43f3.js"
+    "static/js/main.84305874.js"
   ]
 }
