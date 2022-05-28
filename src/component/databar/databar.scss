@@ -1,0 +1,46 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+
+
+.iconst{
+    @include flex(center, space-between, row ,10px );
+      
+    background-color: $white;
+
+
+    margin: $margin;
+    @include respond-below(md){
+        margin: $margin-sm
+
+    }
+    @include respond-below(sm){
+        @include flex(center, space-between, column ,40px );
+        margin: $margin-sm;
+      
+
+    }
+   
+    
+    .box{
+        height: 15vh;
+         @include flex(center, space-between, row ,5px );
+        
+         @include respond-below(sm){
+             
+             
+         
+             border-bottom: 1px solid $gray
+             
+            }
+          width: 200px;;
+
+          span{
+              font-size: 15px;
+              text-align: start;
+              text-transform: capitalize;
+          }
+     }
+
+
+}

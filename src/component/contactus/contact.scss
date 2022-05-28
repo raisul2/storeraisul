@@ -1,0 +1,101 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+
+.main-contact{
+background-color: whitesmoke;
+}
+
+.contactuse{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: $margin;
+    @include respond-below(sm){
+    
+        margin: $margin-sm;
+     }
+   
+    
+    h1{
+        font-size: 30px;
+        color: $red;
+    }
+    @include flex(start,start,  column ,20px );
+   
+
+hr{
+    width: 100%;
+}
+    
+    
+    .contact-input{
+
+width: 100%;
+
+    .wrap{
+        @include flex(start, space-between,   row ,50px );
+       
+ width: 70%;
+ @include respond-below(sm){
+    @include flex(start, space-between,   column ,5px );
+    width: 100%;
+ }
+
+ @include respond-below(md){
+    
+    width: 100%;
+ }
+
+     
+         font-size: 20px;
+         text-align: start;
+         text-transform: capitalize;
+          label{
+              display: block;
+              padding: 10px;
+              padding-left: 0;
+             
+          }
+        
+
+        
+
+        input{
+       
+         padding: 7px;
+         border-radius: 10px;
+         width: 100%; 
+         border: none;
+         outline: none;
+         @include respond-below(sm){
+             padding: 12px;
+         }
+      
+        
+         background-color: $white;
+        }
+
+        textarea{
+            resize: none;
+            background-color: $white;
+            outline: none;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 100%;
+        }
+
+    }
+   
+}
+button{
+    padding: 10px;
+    background-color: $red;
+    color: $white;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    width: 150px;
+
+}
+}

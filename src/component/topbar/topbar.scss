@@ -1,0 +1,289 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lato:ital,wght@0,100;1,100&family=Poppins:ital,wght@0,200;0,300;1,100;1,300;1,400;1,500&family=Raleway:wght@100&family=Roboto:wght@300&family=Source+Sans+Pro:ital,wght@0,200;0,900;1,400;1,900&display=swap');
+.main-top{
+  
+    font-family: 'Roboto', sans-serif;
+    .top{
+        margin: $margin;
+       
+        @include respond-below(md){
+            margin: $margin-sm
+        }
+        min-height: 5vh;
+
+ 
+        @include flex(center, space-between, row ,0 );
+       
+        .langu{
+            @include flex(center, space-between, row ,0 );
+            @include respond-below(md){
+               justify-content: center;
+            }
+        }
+
+      span{
+          display: inline;
+          font-size: 15px;
+          text-transform: capitalize;
+           margin-right: 20px;
+           
+      }
+
+      .setting{
+        @include flex(center, space-between,  row ,50px );
+        @include respond-below(md){
+            gap: 0;
+            
+        }
+          p{
+              font-size: 15px;
+              @include center;
+              text-transform: capitalize;
+              @include respond-below(md){
+                display: none;
+            }
+          }
+      }
+
+    }
+
+    hr{
+        margin-bottom: 10px;
+    }
+}
+
+select {
+    width: 80px;
+     outline: none;
+     border: none;
+     text-transform: capitalize;
+
+  
+  
+   
+ }
+
+
+ .middle{
+      
+     margin: $margin;
+    min-height: 15vh;
+     @include flex(center, space-between, row ,10px );
+     @include respond-below(md){
+       margin:  $margin-sm;
+       flex-direction: column;
+        
+    } 
+
+      
+    .logo{
+        width: 200px;
+        @include respond-below(sm){
+            width: 100%;
+        }
+       svg{
+           text{
+               stroke: $dark;
+               font-size: 550px;
+               text-transform: uppercase;
+               font-weight: 900;
+               stroke-width: 5;
+               animation: text 5s infinite linear alternate;
+               @include respond-below(sm){
+               
+            }
+             
+           }
+       }
+    }
+
+
+    .search{
+       width: 50%;
+        min-height: 30px;
+        border-radius: 50px;
+        border: 2px solid $red;
+        overflow: hidden;
+        @include flex(center, space-between, row ,0 );
+        @include respond-below(sm){
+            width: 100%;
+        order: 2;
+        }
+        @include respond-below(md){
+           
+        order: 2;
+        margin-bottom: 10px;
+        }
+
+        
+         input{
+              
+              
+              
+            height: 100%;
+             margin-left: 20px;
+             width: 80%;
+             border: none;
+             outline: none;
+             padding: 10px;
+
+             
+         }
+         span{
+            @include flex(center, center, row ,0 );
+           
+            background-color: $red;
+            border: none;
+            outline: none;
+            width: 20%;
+            height: 40px;
+            outline: none;
+            border-left: 1px solid $gray;
+            z-index: 0;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                background-color: $dark;
+            }
+            
+             
+          
+        svg{
+            color: $white;
+        }
+       }
+    }
+
+
+     .icons{
+        @include flex(center, center, row ,10px );
+            
+         span{
+            @include flex(center, center, row ,0 );
+             border: 2px solid $red;
+             padding: 10px;
+             border-radius: 100%;
+             color: $red;
+         }
+     }
+
+
+ }
+
+
+ @keyframes text {
+      0%{
+       stroke-dasharray: 0 50%;
+    }
+    100%{
+          stroke-dasharray: 50% 0;
+
+      }
+ }
+
+ .active{
+     position: fixed;
+     margin: $margin;
+     top: 0;
+       width: 100%;
+     z-index: 4;
+     left: 0;
+     border-radius:1px;
+
+     
+ }
+
+
+ .navba{
+     transition: all .5s ease-in-out;
+    min-height: 8vh;
+    background-color: $dark;
+    margin: $margin;
+    
+    display: flex;
+    margin-bottom: 20px;
+    
+    @include respond-below(sm){
+        margin: $margin-sm;
+        margin-bottom: 20px;
+         
+    }
+    .mobile{
+        margin: 0 ;
+        margin-left: 20px;
+         width: 530px;
+        @include flex(center, space-between, row ,0 );
+        @include respond-below(sm){
+            display: none;
+          
+        }
+    }
+ }
+
+ .ul{
+    
+     li{
+
+         list-style-type: none;
+         a{
+             display: block;
+             padding: 10px;
+             text-decoration: none;
+             font-size: 20px;
+             color: $white;
+             text-transform: capitalize;
+             font-weight: 500;
+             transition: all .5s ease-in-out;
+              &:hover{
+                  color: $dark;
+                  background-color: #FFFFFF;
+                  border-radius: 10px;
+              }
+
+              @include respond-below(sm){
+                text-align: start;
+                &:hover{
+                    color: black;
+                    background-color: #FFFFFF;
+                }
+            }
+             
+
+         }
+     }
+ }
+
+ .mobile-m{
+     position: relative;
+     width: 100%;
+     display: none;
+     @include respond-below(sm){
+        display: flex;
+
+      
+    }
+     svg{
+         font-size: 20px;
+         z-index: 3;
+         color: $white;
+         position: absolute;
+         top: 30%;
+         right: 10%;
+         
+         
+         
+     }
+     .box{
+         position: absolute;
+         height: 40vh;
+         background-color:  $dark;
+         left: 0;
+         top: 80%;
+         width: 200px;
+         z-index: 3; 
+         border-radius: 0 0 15px 15px ;
+         transition: all 1s linear;
+     }
+ }

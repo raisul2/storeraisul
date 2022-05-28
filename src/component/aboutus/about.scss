@@ -1,0 +1,67 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script&family=Lato:ital,wght@0,100;1,100&family=Poppins:ital,wght@0,200;0,300;1,100;1,300;1,400;1,500&family=Raleway:wght@100&family=Roboto:wght@300&family=Source+Sans+Pro:ital,wght@0,200;0,900;1,400;1,900&display=swap');
+
+.main-about{
+   
+
+    .abot{
+        text-align: start;
+       
+        color: $dark;
+        
+        margin: $margin;
+        flex-wrap: wrap;
+        @include flex(start, start, column ,40px );
+        @include respond-below(sm){
+            @include flex(start, center, column ,50px );
+            
+            margin: $margin-sm;
+        }
+
+       
+
+        ul{
+            @include flex(start, start, column ,10px );
+              flex-wrap: wrap;
+            padding-left: 50px;
+            li{
+                
+                
+                font-size: 70%;
+            }
+        }
+
+        
+    }
+
+   .img{
+      
+    padding-bottom: 100px;
+
+   
+    font-family: 'Dancing Script', cursive;
+        
+a{
+    text-decoration: none;
+    color: $dark;
+}
+      img{
+        border-radius: 500px;
+        max-width: 40vh;
+     
+        height: 40vh;
+          object-fit: cover;
+          cursor: pointer;
+          transition: all .5s ease-in-out;
+
+          &:hover{
+              transform: scale(1.05);
+          }
+      }
+   }
+
+
+}

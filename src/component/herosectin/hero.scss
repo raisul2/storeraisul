@@ -1,0 +1,154 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+
+.main{
+
+    background-color: $gray;
+}
+
+.hero-section{
+    
+    
+    margin: $margin;
+  
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr ;
+      grid-gap: 15px;
+      @include respond-below(sm){
+          
+          grid-template-columns: 1fr  ;
+          margin: $margin-sm;
+          grid-gap: 0;
+      }
+
+      @include respond-below(md){
+          margin: $margin-sm;
+
+      }
+   
+   
+
+    .middles{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: $white;
+    overflow: hidden;
+    border-radius: $border-redus;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit:  cover;
+        }
+
+    }
+
+
+    .left{
+        border-radius: $border-redus;
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 40px;
+         
+        .title{
+            height: 7vh;
+            background-color: $red;
+            margin: 0 auto ;
+            @include flex(center, space-between, row ,10px );
+            font-size: 20px;
+            text-transform: capitalize;
+             
+            padding: 10px;
+            color: $white;
+
+            span{
+                 display: flex;
+                gap: 5px;
+
+                
+            }
+
+             
+            
+        }
+
+
+    }
+}
+
+
+.category{
+    background-color: yellow;
+    background-color: $white;
+    p{
+        display: flex;
+        padding: 10px;
+        text-align: start;
+        border-bottom: 1px solid $gray;
+        text-transform: capitalize;
+        font-size: 20px;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            background-color: $dark;
+            color: $white;
+        }
+
+    }
+
+}
+
+
+
+.right{
+    background-color: $white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    overflow: hidden; 
+    border-radius: $border-redus;
+    font-size: 20px;
+    
+    .ti{
+       height: 7vh;
+       background-color: $red;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-transform: capitalize;
+    }
+
+    
+    .div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+
+        h3{
+            color: $red;
+        }
+    }
+    
+}
+
+
+
+.timer{
+     
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        display: block;
+        padding: 10px;
+        background-color: $gray;
+        border-radius: $border-redus;
+        font-size:20px;
+
+    }
+}
+
+
+

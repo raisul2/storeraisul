@@ -1,0 +1,48 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+
+
+.footer{
+   
+    background-color: $gray;
+text-align: start;
+line-height: 30px; 
+    .main{
+        margin: $margin;
+        @include flex(start, space-between, row ,0 );
+        font-size: 15px;
+        color: rgb(62, 62, 62);
+        text-transform: capitalize;
+        @include respond-below(md){
+            flex-direction: column;
+            margin: $margin-sm;
+         }
+        .box1{
+            
+             max-width: 300px;
+             height: 40vh;
+             
+         }
+
+         .box{
+             height: 40vh;
+         }
+
+         .box2{
+            height: 20vh;
+            @include flex(start, space-between,column ,30px );
+             .icons{
+                 display: flex;
+                 gap: 10px;
+
+                 svg{
+                     font-size: 20px;
+                     color: $red;
+                 }
+                 
+             }
+             
+         }
+    }
+}

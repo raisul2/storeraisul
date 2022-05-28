@@ -1,0 +1,160 @@
+@import '../../scss/media';
+@import '../../scss/mixin';
+@import '../../scss/varible';
+
+.main-blog{
+    margin-top: 10px;
+   padding-top: 20px;
+ background-color: whitesmoke;
+ padding-bottom: 20px;
+ @include flex(start, space-between, row ,10px );
+ 
+ @include respond-below(sm){
+     margin: $margin-sm;
+     @include flex(center, space-between, column ,10px );
+     
+    
+}
+
+}
+
+.lefts{
+    
+    margin-left: 100px;
+    @include flex(center, space-between, column ,10px );
+     
+    @include respond-below(md){
+        margin: $margin-sm;
+    }
+   
+
+
+  
+    
+}
+
+.rights{
+    
+    margin-right: 100px;
+   
+    
+    max-width: 300px;
+    margin-top: 16px;
+   
+    @include respond-below(md){
+        margin-right: 15px;
+        width: 100%;
+
+    }
+    @include respond-below(sm){
+        margin-right: 15px;
+        margin-left: 15px;
+       border-radius: 0;
+       
+
+    }
+
+    .rbox{
+       
+       
+         height: inherit;
+         text-align: start;
+         @include flex(center, space-between, column ,10px );
+         width: 100%;
+
+         font-size: 15px;
+
+
+          .inputs{
+            background-color: $white;
+            @include flex(center, space-between, row,10px );
+           
+            width: 100%;
+            p{
+                display: block;
+                padding: 10px;
+                background-color: $red;
+                color: $white;
+              
+            }
+            input{
+                height: 100%;
+                width: 100%;
+                border: none;
+                outline: none;
+                padding-left: 5px;
+            } 
+          }
+
+         ///  i wonna
+
+         
+           
+    }
+
+
+
+    .pbox{
+padding: 10px;
+background-color: $white;
+        h3{
+            display: block;
+            background-color: $red;
+            padding: 10px;
+            width: 100%;
+            color: $white;
+        }
+        width: 100%;
+       
+        
+        @include flex(start,center, column,15px);
+         
+       text-align: start;
+    }
+
+    .archive{
+        @extend .pbox
+    }
+
+  
+}
+
+
+.boxs{
+     min-width: 200px;
+    min-height: 25vh;
+    margin-top: 20px;
+    padding: 10px;
+   
+    @include respond-below(sm){
+        margin: $margin-sm;
+    }
+     
+    border-radius: $border-redus;
+    @include flex(center, space-between, row ,10px );
+      background-color: $white;
+       
+      .img{
+         max-width: 250px;
+
+          img{
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+            
+        }
+
+    .texts{
+        @include flex(start, start, column ,10px );
+
+      text-align: start;
+      p, h5{
+          color: rgb(78, 77, 77);
+          font-weight: 100;
+          text-transform: capitalize;
+      }
+      
+
+    }
+}

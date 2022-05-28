@@ -1,0 +1,25 @@
+@import './media';
+@import './restext';
+@import './mixin';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 1.2;
+    text-align: center;
+    
+  } 
+
+  html {
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  
+  }
+
+
+  
